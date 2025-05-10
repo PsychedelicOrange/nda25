@@ -11,5 +11,10 @@ config_version=5
 [application]
 
 config/name="plant_growth"
+run/main_scene="uid://jc2j0bup5urm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
