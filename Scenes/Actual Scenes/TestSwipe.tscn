@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://jc2j0bup5urm"]
+[gd_scene load_steps=10 format=3 uid="uid://jc2j0bup5urm"]
 
-[ext_resource type="Script" uid="uid://72yo6qnlquqx" path="res://Scripts/Mechanics/SwipeDetector.gd" id="1_0kdum"]
-[ext_resource type="Script" uid="uid://bvlpwqkn7qrq1" path="res://Scenes/test_swipe.gd" id="1_1efjd"]
-[ext_resource type="Script" uid="uid://epfvahyrqwyj" path="res://Scripts/Mechanics/CircleDetector.gd" id="3_qys0e"]
+[ext_resource type="Script" uid="uid://bvlpwqkn7qrq1" path="res://Scenes/Actual Scenes/test_swipe.gd" id="1_csxr3"]
+[ext_resource type="Script" uid="uid://72yo6qnlquqx" path="res://Scripts/Mechanics/SwipeDetector.gd" id="2_cpneo"]
+[ext_resource type="Script" uid="uid://epfvahyrqwyj" path="res://Scripts/Mechanics/CircleDetector.gd" id="3_2kc37"]
+[ext_resource type="PackedScene" uid="uid://ct5y1luabe3ds" path="res://Scenes/player.tscn" id="4_kx0uy"]
+[ext_resource type="PackedScene" uid="uid://dimhmogn55mo7" path="res://Scenes/instructioncard.tscn" id="5_cpneo"]
 
 [sub_resource type="Gradient" id="Gradient_qys0e"]
 colors = PackedColorArray(1, 0, 0, 1, 0, 1, 0, 1)
@@ -18,10 +20,10 @@ gradient = SubResource("Gradient_1efjd")
 fill_to = Vector2(0.525641, 0)
 
 [node name="TestSwipe" type="Node2D"]
-script = ExtResource("1_1efjd")
+script = ExtResource("1_csxr3")
 
 [node name="SwipeDetector" type="Node2D" parent="."]
-script = ExtResource("1_0kdum")
+script = ExtResource("2_cpneo")
 
 [node name="Label" type="Label" parent="SwipeDetector"]
 offset_left = 546.0
@@ -30,13 +32,13 @@ offset_right = 586.0
 offset_bottom = 360.0
 
 [node name="ColorRect" type="ColorRect" parent="SwipeDetector"]
-offset_left = 475.0
-offset_top = 329.0
-offset_right = 515.0
-offset_bottom = 369.0
+offset_left = 303.0
+offset_top = 402.0
+offset_right = 343.0
+offset_bottom = 442.0
 
 [node name="CircleDetector" type="Node2D" parent="."]
-script = ExtResource("3_qys0e")
+script = ExtResource("3_2kc37")
 
 [node name="Line2D" type="Line2D" parent="CircleDetector"]
 default_color = Color(0, 1, 0.498039, 1)
@@ -63,6 +65,12 @@ offset_left = 475.0
 offset_top = 70.0
 offset_right = 515.0
 offset_bottom = 93.0
+
+[node name="Player" parent="." instance=ExtResource("4_kx0uy")]
+position = Vector2(558, 265)
+
+[node name="Instructioncard" parent="." instance=ExtResource("5_cpneo")]
+position = Vector2(953, 540)
 
 [connection signal="swipe_detected" from="SwipeDetector" to="." method="_on_swipe_detected"]
 [connection signal="circle_completed" from="CircleDetector" to="." method="_on_circle_completed"]

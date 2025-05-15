@@ -13,7 +13,7 @@ config_version=5
 config/name="plant_growth"
 run/main_scene="uid://jc2j0bup5urm"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/sprites/icon.svg"
 
 [autoload]
 
@@ -22,7 +22,9 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
+directories/dtl_directory={
+"timeline-test": "res://assets/dialogic-assets/timeline-test.dtl"
+}
 
 [editor_plugins]
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct5y1luabe3ds"]
+
+[ext_resource type="Texture2D" uid="uid://vb0owfbia4hk" path="res://assets/sprites/plant-4006379_1280.png" id="1_674bt"]
+[ext_resource type="Script" uid="uid://bo70a8brixygo" path="res://assets/InteractPlant.gd" id="2_3mip4"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_674bt")
+
+[node name="Button" type="Button" parent="."]
+offset_left = -38.0
+offset_top = 99.0
+offset_right = 52.0
+offset_bottom = 199.0
+theme_type_variation = &"FlatButton"
+script = ExtResource("2_3mip4")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
