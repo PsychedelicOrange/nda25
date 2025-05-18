@@ -14,4 +14,9 @@ func _on_plant_pressed() -> void:
 func _on_window_pressed() -> void:
 	Dialogic.VAR.Day1.set("window", true)
 	print(Dialogic.VAR.Day1.window)
-	pass
+	run_dialogue("Day1Opening")
+
+func _on_plant_watered() -> void:
+	Dialogic.VAR.Day1.set("water", true)
+	print(Dialogic.VAR.Day1.water)
+	run_dialogue("Day1Opening")

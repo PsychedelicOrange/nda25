@@ -1,5 +1,6 @@
 # TestScene.gd
 extends Node2D
+signal plant_watered
 
 func _ready():
 	$SwipeDetector.hide()
@@ -7,12 +8,12 @@ func _ready():
 	update_instructions()
 
 func update_instructions():
-	$InstructionsLabel.text = "Choose tool:\nShovel (swipe) or Claw (circles)"
+	$InstructionsLabel.text = "Choose tool:\nWatering Can (swipe) or Claw (circles)"
 
 func _on_shovel_button_pressed():
 	$CircleDetector.hide()
 	$SwipeDetector.show()
-	$InstructionsLabel.text = "Swipe to dig out plant!"
+	$InstructionsLabel.text = "Swipe to Water the soil of the plant!"
 
 func _on_claw_hand_button_pressed():
 	$SwipeDetector.hide()
@@ -20,7 +21,8 @@ func _on_claw_hand_button_pressed():
 	$InstructionsLabel.text = "Circle to loosen roots!"
 
 func _on_swipe_detected(_direction):
-	handle_success("Swipe succeeded! Plant dug out.")
+	handle_success("Swipe succeeded! Plant Watered.")
+	emit_signal("plant_watered")
 
 func _on_circle_completed():
 	handle_success("Roots loosened! Plant ready for transfer.")

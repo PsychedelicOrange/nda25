@@ -48,7 +48,7 @@ gradient = SubResource("Gradient_qys0e")
 
 [node name="Area2D" type="Area2D" parent="CircleDetector"]
 
-[node name="Shovel" type="TextureButton" parent="."]
+[node name="Water" type="TextureButton" parent="."]
 offset_left = 854.0
 offset_top = 57.0
 offset_right = 918.0
@@ -91,9 +91,10 @@ size_flags_horizontal = 4
 [node name="DialogicTimelineNode" type="Node2D" parent="."]
 script = ExtResource("6_2kc37")
 
+[connection signal="plant_watered" from="." to="DialogicTimelineNode" method="_on_plant_watered"]
 [connection signal="swipe_detected" from="SwipeDetector" to="." method="_on_swipe_detected"]
 [connection signal="circle_completed" from="CircleDetector" to="." method="_on_circle_completed"]
-[connection signal="pressed" from="Shovel" to="." method="_on_shovel_button_pressed"]
+[connection signal="pressed" from="Water" to="." method="_on_shovel_button_pressed"]
 [connection signal="pressed" from="Claw" to="." method="_on_claw_hand_button_pressed"]
 [connection signal="pressed" from="Player/Button" to="DialogicTimelineNode" method="_on_plant_pressed"]
 [connection signal="pressed" from="Window" to="DialogicTimelineNode" method="_on_window_pressed"]

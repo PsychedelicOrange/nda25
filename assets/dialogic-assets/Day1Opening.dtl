@@ -14,21 +14,32 @@ Just gotta open the Window.
 \
 ...right?
 	elif {Day1.window} == true:
-		label windowOpen
-		Ahh... That's better!\
+		if {Day1.water} == false:
+			label windowOpen
+			Ahh... That's better!\
 Breakfast in bed never gets old.
-		I'm kinda getting the hang of my words being broadcasted this way.
-		Feels weird that you can hear me though.
-		...
-		I get that you aren't really a caretaker or anything.
-		Not after...
-		...
-		Listen, I know Charlie just wanted me here because she had no next of kin.
-		So, for the forseeable future, \
+			I'm kinda getting the hang of my words being broadcasted this way.
+			Feels weird that you can hear me though.
+			...
+			I get that you aren't really a caretaker or anything.
+			Not after...
+			...
+			Listen, I know Charlie just wanted me here because she had no next of kin.
+			So, for the forseeable future, \
 You're stuck with me buddy.
-		I am not exactly high maintainence.
-		Just need some water in my soil everyday.\
+			I am not exactly high maintainence.
+			Just need some water in my soil everyday.\
 Do that, and we are gonna get along just fine!
-		label day1Start
-		if {Day1.water} == true:
+			label day1Start
+			[end_timeline]
+		elif {Day1.water} == true:
 			Thanks for hydrating the soil.
+			And for listening to me.
+			...
+			I used to listen to Charlie for hours.
+			She just went on and on about her mom and how the landlord was being unreasonable again and how her husband was ...
+			Oh... right...
+			You probably know all bout how she droned on.
+			But unlike you, I didn't really have a voice to tell her to shut up.
+			...
+			Maybe that was a good thing yea?
