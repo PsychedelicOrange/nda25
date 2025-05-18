@@ -1,0 +1,34 @@
+if {Day1.windowRequest} == false:
+	Umm... Hey there!
+	It's kinda dark in here....
+	Mind getting some sunlight in?\
+I'm starving...
+	set {Day1.windowRequest} = true
+	[end_timeline]
+if {Day1.windowRequest} == true:
+	if {Day1.window} == false:
+		label windowClosed
+		Still waiting on that sunlight...\
+Just gotta open the Window.
+		You know how that works.\
+\
+...right?
+	elif {Day1.window} == true:
+		label windowOpen
+		Ahh... That's better!\
+Breakfast in bed never gets old.
+		I'm kinda getting the hang of my words being broadcasted this way.
+		Feels weird that you can hear me though.
+		...
+		I get that you aren't really a caretaker or anything.
+		Not after...
+		...
+		Listen, I know Charlie just wanted me here because she had no next of kin.
+		So, for the forseeable future, \
+You're stuck with me buddy.
+		I am not exactly high maintainence.
+		Just need some water in my soil everyday.\
+Do that, and we are gonna get along just fine!
+		label day1Start
+		if {Day1.water} == true:
+			Thanks for hydrating the soil.
