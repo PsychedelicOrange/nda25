@@ -25,6 +25,7 @@ directories/dch_directory={}
 directories/dtl_directory={
 "Day1Opening": "res://assets/dialogic-assets/Day1Opening.dtl",
 "Day2": "res://assets/dialogic-assets/Day2.dtl",
+"Day3": "res://assets/dialogic-assets/Day3.dtl",
 "timeline-test": "res://assets/dialogic-assets/timeline-test.dtl"
 }
 glossary/default_case_sensitive=true
@@ -35,6 +36,13 @@ variables={
 "windowRequest": false
 },
 "Day2": {
+"tamped": false,
+"water": false,
+"window": false,
+"windowRequest": false
+},
+"Day3": {
+"pruned": false,
 "tamped": false,
 "water": false,
 "window": false,

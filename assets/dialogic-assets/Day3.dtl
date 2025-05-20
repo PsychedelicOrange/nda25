@@ -1,0 +1,96 @@
+if {Day3.windowRequest} == false:
+	...
+	Something on my stem feels wierd.
+	set {Day2.windowRequest} = true
+else:
+	if {Day3.window} == true:
+		if {Day3.water} == false:
+			if {Day3.tamped} == false:
+				if {Day3.pruned} == false:
+					Ugh...looks like a branch grew where I didn't want it to.
+					It should probably be pruned.
+					Charlie always did the same for the others when I was in her garden.
+					Can't tell if it was for their good...\
+...or hers.
+					She was our mother, wasn't she?\
+And don't all mothers know best?
+					jump waterCheck
+					jump tampedCheck
+					Not sure if the pruning will help though.\
+Could just grow back anytime.
+					I mean, it's hard to know ryt?\
+I'm still kinda learning as I grow too.
+					I'm sure it'll be fine.
+					...
+					I can't really know what it's like being a human. \
+Not really anyway.
+					You have all these gifts of mobility and communication...
+					...whereas I'm kinda just... \
+...here.
+					And yet we both pass through time, changing in the same ways.
+					I think being in a routine helps with that.\
+The time passing, I mean.
+					We just grow up and make more time in that routine for the things we love and value, don't we?\
+The actions say it all.
+					And based on her actions,\
+I think we both know what Charlie valued too.
+					Her garden...\
+...and you.
+					[end_timeline]
+				else:
+					That kinda hurt...
+					...was it supposed to?
+					I mean, it was still a part of me.\
+Maybe I could've live with it.
+					...
+					Or it was probably not going to let me live.
+					...
+					Charlie was the mother, wasn't she?
+					She knew how to raise us...\
+...she even knew you would need something like me to take care of.
+					I guess now that your dad is in jail, you ended up alone too.
+					Alone...\
+...with me.
+			else:
+				Thanks for that! My roots feel great.
+				Half the time I keep thinking it's Charlie doing it. But I know it's you.
+				...
+				It's not that Im'm comparing you to her though. I'm just saying...
+				...you have her best qualities.
+				You woldn't be you without it.\
+And you also have been growing with it too.
+				[end_timeline]
+		else:
+			It used to rain sometimes.
+			The days when it did, you and Charlie used to stay inside and watch us from the room.
+			I may not have eyes, but my senses are tight.\
+I can tell the difference between your breath and Charlie's.
+			Charlie's breath is basically baked into my DNA at ths point.
+			Ever since I was a seed, I heard nothing but her voice.\
+Felt nothing but her hands and her breath on my shell.
+			I don't even think I was planted and still.
+			...
+			You know how she dealt with it all?\
+She kept talking to us.
+			...until she didn't.
+			[end_timeline]
+label waterCheck
+if {Day1.water} == false:
+	if {Day2.water} == false:
+		label noWater
+		I guess the lack of water might have something to do with it.
+		Not sure if this a good or bad thing.
+	else:
+		jump anyWater
+else:
+	label anyWater
+	It can't have been from dry soil,\
+You watered it.
+	Must've been something else.
+label tampedCheck
+if {Day2.tamped} == false:
+	Maybe it sprung up as a result of the roots tensing up?
+	Speaking of, they are still tense after yesterday.
+else:
+	Couldn't have been about the tense roots,\
+You tamped the soil.
